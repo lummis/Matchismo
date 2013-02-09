@@ -63,13 +63,13 @@
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     NSLog(@"button state: %d", sender.state);
     self.flipCount++;
-    self.game.mode = self.modeSwitch.selectedSegmentIndex + 2;
     [self updateUI];
 }
 
 - (IBAction)deal:(id)sender {
     self.game = nil;
     self.flipCount = 0;
+    self.game.mode = self.modeSwitch.selectedSegmentIndex + 2;
     [self updateUI];
 }
 
